@@ -1,0 +1,71 @@
+1. Cấu trúc DOM cơ bản
+	•	HTML skeleton: <html> (root) → <head> → <body>.
+	•	Bên trong hay gặp:
+	•	<meta>, <title>, <link>, <script> (trong <head>).
+	•	<header>, <nav>, <main>, <section>, <article>, <aside>, <footer> (semantic)
+Nội dung: <h1>…<h6>, <p>, <a>, <img>, <ul>/<ol>/<li>, <div>, <span>, v.v.
+Về loại node DOM: Document, Element, Text, Comment, Attribute.
+
+Ví dụ 
+        <!doctype html>
+        <html lang="vi">
+        <head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <title>Trang mẫu</title>
+            <link rel="stylesheet" href="style.css" />
+        </head>
+        <body>      
+            <header>...</header>
+            <main>...</main>
+            <footer>...</footer>
+            <script src="app.js"></script>
+        </body>
+        </html>
+
+2. Cấu trúc HTML của một bảng (<table>)
+	•	Thẻ chính: <table>
+	•	Phần tùy chọn nhưng khuyến nghị:
+            <caption> (tiêu đề bảng)
+            <colgroup> / <col> (định nghĩa cột)
+            <thead> (hàng tiêu đề), <tbody> (nội dung), <tfoot> (chân bảng)
+	•	Hàng & ô:
+            <tr>: table row
+            <th>: header cell (dùng scope="col|row")
+            <td>: data cell
+
+Ví dụ:
+  <table>
+  <caption>Điểm kiểm tra</caption>
+  <colgroup>
+    <col span="1" />
+    <col />
+    <col />
+  </colgroup>
+  <thead>
+    <tr>
+      <th scope="col">Họ tên</th>
+      <th scope="col">Toán</th>
+      <th scope="col">Văn</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">An</th>
+      <td>9.0</td>
+      <td>8.5</td>
+    </tr>
+    <tr>
+      <th scope="row">Bình</th>
+      <td>8.0</td>
+      <td>9.2</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th scope="row">Trung bình</th>
+      <td>8.5</td>
+      <td>8.85</td>
+    </tr>
+  </tfoot>
+</table>
